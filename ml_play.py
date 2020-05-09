@@ -2,7 +2,7 @@ from mlgame.communication import ml as comm
 
 def ml_loop(side: str):
     print("For {}".format(side))
-    comm.ml_ready()
+    com.ml_ready()
 
     while True:
         scene_info = comm.recv_from_game()
@@ -12,4 +12,4 @@ def ml_loop(side: str):
             comm.ml_ready()
             continue
 
-        comm.send_to_game({"frame": scene_info["fame"], "command": "MOVE_LEFT"})
+        comm.send_to_game({"frame": scene_info["frame"], "command": "MOVE_LEFT"})
