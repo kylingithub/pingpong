@@ -12,4 +12,4 @@ def ml_loop(side: str):
             comm.ml_ready()
             continue
 
-        comm.send_to_game({"frame": scene_info["frame"], "command": "MOVE_LEFT"})
+        comm.send_to_game({"frame": scene_info["frame"], "command": "MOVE_LFT"})
