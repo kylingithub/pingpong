@@ -2,10 +2,10 @@ from mlgame.communication import ml as comm
 
 def ml_loop(side: str):
     print("For {}".format(side))
-    com.ml_ready()
+    comm.ml_ready()
 
     while True:
-        scene_info = comm.recv_from_game()
+        scene_info = com.recv_from_game()
 
         if (scene_info["status"] == "GAME_1P_WIN" or
             scene_info["status"] == "GAME_2P_WIN"):
